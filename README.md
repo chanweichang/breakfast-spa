@@ -1,3 +1,42 @@
+# React與Nodejs
+## 以javascript為基礎實作UI介面
+
+預想首頁、商品資料、購物車三個介面<br>
+先行安裝react 參考網址：<br>
+[安裝react](https://github.com/facebook/create-react-app?tab=readme-ov-file#creating-an-app)
+
+
+利用Router、Link工具,來連接不同的component並且切換<br>
+此處注意需要安裝工具react router<br>
+### INSTALL:<br>
+在Terminal cd 到自己建立my-app的資料夾底下 'npm install react-router-dom' 指令
+
+預想圖示：<br>
+![reactFlow](reactFlow.png)
+
+css樣式設計與圖片皆放置在public資料夾內
+![cssandpics](cssandpics.png)
+
+設想可能會需要再多個component都需要使用以至於在各個路徑上加上process.env.PUBLIC_URL
+
+先試做抓取api 網址為[demoapi](https://chanweichang.github.io/demoapi/product.json)
+
+在console.log發現因為useState在資料變動時會重新render頁面以至於發生無窮迴圈，所以使用Hook工具裡的另一個 useEffect method 再給予不同的參數下讓fetch api只要執行一次就好。
+
+在首頁選擇或是在資料頁面點選加入購物車，再切換頁面要能夠獲取相同的資料，最簡單直覺的方法就是直接將整個app.js都納入資料分享的範圍
+![context](context.png)
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
