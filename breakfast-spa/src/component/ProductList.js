@@ -76,31 +76,35 @@ export default function ProductList() {
 
 
   return (
-    <div>
-      <input type= "text" onChange={e=>setInput(e.target.value)} />
+    <>
+      {/* <input type= "text" onChange={e=>setInput(e.target.value)} /> */}
 
       {/* {showProduct && <button onClick={()=>{setShowProduct(false)}}>隱藏產品</button>}
       {!showProduct && <button onClick={()=>{setShowProduct(true)}}>顯示產品</button>} */}
-
+      
       <Title mainTitle="請選擇餐點" />
       
-      <div>
+      <div className="container">
         {
           // showProduct && 
           productList.map(product=>(
-            <div className="productBorder" key={product.id}>
-              {product.name}<br/>
-              {product.price}<br/>
-              <Link to = {"/product/" + product.id}>
-                <img src={process.env.PUBLIC_URL+"/pics/"+product.image}
-                  alt={product.name} width="300"/>
-              </Link>
-              <br/>
-              <QuantityBtn productInfo={product}/>
-            </div>
+            <React.Fragment key={product.id}>
+
+              <div className="containerItem">
+                <Link to = {"/product/" + product.id}>
+                  <img src={process.env.PUBLIC_URL+"/pics/"+product.image} alt={product.name} width="300"/>
+                </Link>
+
+                <div className="productName">
+                  {product.name} - {product.price} 元/件
+                </div>
+
+                <QuantityBtn productInfo={product}/>
+              </div>
+            </React.Fragment>
           ))
         }
       </div>
-    </div>
+    </>
   )
 }

@@ -27,16 +27,30 @@ export default function ProductDetail() {
     <div>
         {
             productDetail &&
-            <div>
+            <div className="productDetail">
                 <Title mainTitle={productDetail.name+"產品資料"}/>
-                <img src={process.env.PUBLIC_URL+"/pics/"+productDetail.image}
-                        alt={productDetail.name} width="400px"/>
-                <p>名稱：{productDetail.name}</p>
-                <p>售價：{productDetail.price}</p>
-                <QuantityBtn productInfo={productDetail}/>
+
+                <table width="100%">
+                    <tbody>
+                        <tr>
+                            <td align="center">
+                                <img src={process.env.PUBLIC_URL+"/pics/"+productDetail.image} alt={productDetail.name} width="400px"/>
+                            </td>
+                            <td width="45%" padding="10">
+                                <p>名稱：{productDetail.name}</p>
+                                <p>售價：{productDetail.price}</p>
+                                <QuantityBtn productInfo={productDetail}/>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         }
-        <Link to ="/" >回產品列表</Link>
+        <Link to ="/" >
+            <div className="backToGoodsLisBtn">
+                回產品列表
+            </div>
+        </Link>
     </div>
   )
 }

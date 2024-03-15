@@ -20,7 +20,7 @@ export default function Checkout() {
             <Title mainTitle="你的購物車" />
             {
                 cartEmpty &&
-                <div>
+                <div className="nothingInCart">
                     您的購物車現在沒有商品<br/>
                     <Link to = "/">去產品頁看看</Link>
                 </div>
@@ -28,31 +28,53 @@ export default function Checkout() {
 
             {
                 !cartEmpty &&
-                <div>
-                    <div id="cartSection">
-                        {
-                            /* 產品列表 */
-                            cartItems.map((product)=>(
-                                <div key={product.id}>
-                                    <img src={process.env.PUBLIC_URL+"/pics/"+product.image} width="300"/>
-                                    {product.name};
-                                    {product.price};
-                                    購買數量：{product.quantity};
-                                    <QuantityBtn productInfo={product}/>
-                                </div>
-                            ))
-                        }
+                <div className="container">
+                    <div className="cartSection">
+                        <div className="checkoutTable">
+                            <tbody>
+                                {
+                                    /* 產品列表 */
+                                    cartItems.map((product)=>(
+                                        <tr key={product.id}>
+                                            <td>
+                                                <Link to = {"/product/"+ product.id}>
+                                                    <img src={process.env.PUBLIC_URL+"/pics/"+product.image} width="300"/>
+                                                </Link>
+                                            </td>
+                                            <td>
+                                                <p>名稱：{product.name}</p>
+                                                <p>售價：{product.price}</p>
+                                                <p>購買數量：{product.quantity}</p>
+                                            </td>
+                                            <td width="200">
+                                                <QuantityBtn productInfo={product}/>
+                                            </td>
+                                            <td>
+                                                <div className="productSubTotal">
+                                                    ${product.price*product.quantity}
+                                                </div>
+                                                
+                                            </td>
+                                                
+                                                
+                                        </tr>
+                                    ))
+                                }
+                            </tbody>
+                        </div>
                     </div>
-                    <div id="checkoutSection">
+                    <div className="checkoutSection">
                         {/* 價錢總數 + 額外訊息 */}
                         <div>全部餐點數量共</div>
-                        <div>{grandTotal}元</div>
+                        <div className="grandTotal">{grandTotal}元</div>
 
                         {
                             grandTotal >= freeDiscount ?
-                            <div>如有優惠券可以使用較划算</div> :
-                            <div>滿${freeDiscount}可以使用划算優惠券，不找零<br/></div>
+                            <div className="freeDiscount">如有優惠券可以使用較划算</div> :
+                            <div className="freeDiscount">滿${freeDiscount}可以使用划算優惠券，不找零<br/></div>
                         }
+
+                        <button>結帳付款</button>
                     </div>
                         
                 </div>

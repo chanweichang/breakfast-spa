@@ -3,9 +3,7 @@ import React from 'react'
 export default function Title({mainTitle, subTitle}) {
   return (
     <div>
-        <h1 style={{borderBottom: '5px solid red', textAlign: 'center'}}>
-            {mainTitle}
-        </h1>
+        <h1>{mainTitle}</h1>
     </div>
   )
 }
