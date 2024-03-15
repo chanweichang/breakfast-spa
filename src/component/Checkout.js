@@ -38,7 +38,7 @@ export default function Checkout() {
                                         <tr key={product.id}>
                                             <td>
                                                 <Link to = {"/product/"+ product.id}>
-                                                    <img src={process.env.PUBLIC_URL+"/pics/"+product.image} width="300"/>
+                                                    <img src={process.env.PUBLIC_URL+"/pics/"+product.image} alt={product.name}width="300"/>
                                                 </Link>
                                             </td>
                                             <td>

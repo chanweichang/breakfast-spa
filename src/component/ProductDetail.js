@@ -21,7 +21,7 @@ export default function ProductDetail() {
             setProductDetail(productInfo);
         })
     
-    },[]);  //dependency array
+},[params.id]);  //ependency array
 
   return (
     <div>

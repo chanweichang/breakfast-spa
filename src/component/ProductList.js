@@ -47,7 +47,7 @@ export default function ProductList() {
   // ]
 
     let [productList, setProductList] = useState([]);
-    let [input , setInput] = useState('');
+    //let [input , setInput] = useState('');
 
   //useEffect
   useEffect(() =>{
@@ -60,15 +60,15 @@ export default function ProductList() {
 
     console.log(productList)
 
-  },[]);
+  },[ProductList]);
 
 
-  useEffect(()=> {
-    if(input.length>4)
-      console.log("string long enough");
-    else
-      console.log("string too short");
-  },[input])
+  // useEffect(()=> {
+  //   if(input.length>4)
+  //     console.log("string long enough");
+  //   else
+  //     console.log("string too short");
+  // },[input])
 
 
   // const [showProduct, setShowProduct] = useState(false);
@@ -92,7 +92,7 @@ export default function ProductList() {
 
               <div className="containerItem">
                 <Link to = {"/product/" + product.id}>
-                  <img src={process.env.PUBLIC_URL+"/pics/"+product.image} alt={product.name} width="300"/>
+                  <img src={process.env.PUBLIC_URL+"/pics/"+product.image} alt="" width="300"/>
                 </Link>
 
                 <div className="productName">
