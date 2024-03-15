@@ -1,6 +1,8 @@
 # React與Nodejs
 ## 以javascript為基礎實作UI介面
 
+[實作成品](https://451d584a.demo-react-zxt.pages.dev)
+
 預想首頁、商品資料、購物車三個介面<br>
 先行安裝react 參考網址：<br>
 [安裝react](https://github.com/facebook/create-react-app?tab=readme-ov-file#creating-an-app)
