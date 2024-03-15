@@ -60,7 +60,7 @@ export default function ProductList() {
 
     console.log(productList)
 
-  },[ProductList]);
+  },[productList]);
 
 
   // useEffect(()=> {
