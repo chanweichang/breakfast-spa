@@ -1,39 +1,70 @@
-# React 與 nodejs 
-### 以javaScript為基礎實做一個UI介面
+# Getting Started with Create React App
 
-## Description:
-做一個購物車的網頁，並且要能夠記錄選購的商品並且在不同的頁面記錄下來。
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Available Scripts
 
-## Step:
-預先定好首頁、商品、結帳三個頁面，並且設想流程。<br>
-<img src="breakfast-spa/reactFlow.jpg"><br>
+In the project directory, you can run:
 
+### `npm start`
 
-切換頁面之下使用 ReactRouter 工具（要額外安裝npm install react-router-dom）
-並且使用 Link 連結到不同的頁面<br>
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-使用useState有變化時都會重新render一次，所以另外使用useEffect解決無旋迴圈的問題。
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
+### `npm test`
 
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
+### `npm run build`
 
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
+### `npm run eject`
 
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-專案的工作
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-使用者關於不同功能以及如何使用它們的分步指南。 新增螢幕截圖以更好地說明工作。 您可以新增圖表來顯示專案的架構。 您還可以在本節中新增影片或GIF。
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-您可以提及您在專案中使用的技術堆疊。 這將有助於使用者更好地瞭解專案。
+## Learn More
 
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-安裝指南
+### Code Splitting
 
-我分步指南，包括螢幕截圖和程式，以指導使用者在他們的機器上安裝專案。
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-您可以提及一些可能需要本地安裝的預裝工具。 提供在機器上安裝的所有命令和指令碼，並提供螢幕截圖和程式。 新增正在執行的專案的螢幕截圖。
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
