@@ -7,7 +7,7 @@
 
 ## Step:
 預先定好首頁、商品、結帳三個頁面，並且設想流程。<br>
-[reactFlow](reactFlow.jpg)<br>
+![reactFlow](reactFlow.jpg)<br>
 
 
 切換頁面之下使用 ReactRouter 工具（要額外安裝npm install react-router-dom）
